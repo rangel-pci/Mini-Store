@@ -1,0 +1,36 @@
+Como a aplicação funciona
+O usuário pode comprar chaveiros e contribuir na arrecadação de fundos para ONGs, o pagamento pode ser feito com cartão de crédito.
+
+Regra de negócio:
+- o usuário pode selecionar/adicionar ao carrinho um ou mais chaveiros desde que sejam distintos
+- o usuário escolhe o quanto quer pagar no total, desde que o total dividido por unidade de chaveiro seja igual ou maior que o valor minimo (1 dolar)
+  [currency, {product_id, payment_value}]
+- o pagamento pode ser feito com cartão de crédito
+- o usuário pode comprar de forma anônima ou informar um email, que será linkado a um comprador para guardar/acessar o histórico de pagamentos
+
+- ao receber o pagamento, 
+    verificar se, 
+    moeda == USD, o valor minimo por cada chaveiro deve ser >= 1
+    moeda == BRL, o valor minimo por cada chaveiro deve ser >= (valor de 1 Dolar convertido em BRL, na data atual)
+- o usuário pode escolher entre a linguagem PT ou EN e a moeda USD ou BRL
+
+
+1° tela: 
+    - Mostra o total de produtos vendidos e o total arrecadado em USD e BRL
+    - Mostra os produtos que o usuário pode selecionar/adicionar ao carrinho e comprar
+2° tela - mostra o valor total dos produtos selecionados
+3° tela - preenchimento de dados do cartão e um email
+4° tela 
+  - caso o usuário tenha informado um email
+  - mostrará o histórico de pagamentos ao informar um email
+
+
+
+  colocar os vaolres max e min no metadata de produto, para não precisar puxar os prices
+  se teiver customer, colocar no payment intent
+  colocar o id dos produtos no payment, em metadata -> id_produto,valor_pago
+  fazer webhook pra quando o pagamento for confirmado dicionar +1 em vedido de acrodo com id do produto no pagamento
+
+
+como a stripe não deixa fazer muitas requisições, uma forma de melhorar isso é utilizar o redis para cachear a busca de produtos
+atualizando o cache a cada 1 requisição desde que ela sejá feita um minuto após a ultima requisição
