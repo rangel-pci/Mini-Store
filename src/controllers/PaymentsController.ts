@@ -10,7 +10,7 @@ class PaymentsController{
         return res.json(paymentsWithSpecificProperties)
     }
     public async find(req: Request, res: Response){
-        const payments = await PaymentsService.search(req.params.customer_email)
+        const payments = await PaymentsService.search(req.params.customer_id)
         const paymentsWithSpecificProperties = payments.map(product => {
             return (({ id, currency, amount, created }) => ({ id, currency, amount, created }))(product)
         })

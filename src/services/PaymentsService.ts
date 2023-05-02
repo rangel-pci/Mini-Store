@@ -20,12 +20,11 @@ class PaymentsService{
         return paymentIntent
     }
 
-    async search(customer_email: string){
+    async search(customer_id: string){
         const response = await stripe.paymentIntents.search({
-            query: `email: ${customer_email} AND status: succeeded`,
+            query: `customer: '${customer_id}' AND status: 'succeeded'`,
         })
         const payment_intents = response.data
-
         return payment_intents
     }
 }
