@@ -5,6 +5,9 @@ import PaymentsController from "../controllers/PaymentsController"
 import { getInitialInfo } from "../helpers/initialInfo"
 
 export const routes = Router()
+routes.get('/ping', (req, res) => {
+    return res.json({message: '😎 App running...'})
+})
 routes.get('/products', ProductsController.index)
 routes.post('/orders', OrdersController.store)
 routes.get('/payments/:customer_email', PaymentsController.index)
