@@ -14,7 +14,7 @@
 
   watch(show, (newValue) => {
     if(newValue){
-      getPayments(storeCustomer.customer.email)
+      getPayments(storeCustomer.customer.id)
     }
   })
 </script>

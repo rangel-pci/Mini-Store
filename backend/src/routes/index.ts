@@ -10,5 +10,5 @@ routes.get('/ping', (req, res) => {
 })
 routes.get('/products', ProductsController.index)
 routes.post('/orders', OrdersController.store)
-routes.get('/payments/:customer_email', PaymentsController.index)
+routes.get('/payments/:customer_id', PaymentsController.find)
 routes.get('/initial-info', getInitialInfo)

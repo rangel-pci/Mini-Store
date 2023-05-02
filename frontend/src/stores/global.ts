@@ -63,8 +63,9 @@ const usePaymentCheckoutStore = defineStore('paymentCheckout', () => {
 
 const useCustomerStore = defineStore('user', () => {
     const customer = reactive<Customer>({
+        id: 'cus_Non3VUpSnkDhXU',
         name: 'John Doe',
-        email: 'john.doe@email.com',
+        email: 'johndoe59@email.com',
     })
     
     return { customer }
