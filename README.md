@@ -22,6 +22,7 @@
 - [Built Using](#built_using)
 - [Getting Started / Setup](#getting_started)
 - [Final Thoughts](#Final_Thoughts)
+- [Stripe Testing Card](#stripe_testing_card)
 
 ## 💡 About <a name = "about"></a>
 As the name suggests, just a small and simple store (and sort of a database-less application).<br>
@@ -32,6 +33,12 @@ When visiting Stripe's website, I became curious about how its API worked. So I 
   - Mobile-Friendly
   - PWA
   - Webhooks (At the moment, only for payment confirmation event. 🫠)
+- Stripe Testing Card <a name = "stripe_testing_card"></a>
+  - You can use this card to test the application under development or at [MiniStore.rangelpereira.com](https://ministore.rangelpereira.com/)<br>
+  
+  | BRAND | NUMBER | CVC | DATE |
+  | --- | --- | --- | --- |
+  | Mastercard | 5555 5555 5555 4444 | Any 3 digits | Any future date |
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
