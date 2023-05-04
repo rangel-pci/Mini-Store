@@ -19,10 +19,10 @@
 ## 🗒️ Table of Contents
 
 - [About](#about)
+  - [Stripe Testing Card](#stripe_testing_card)
 - [Built Using](#built_using)
 - [Getting Started / Setup](#getting_started)
 - [Final Thoughts](#Final_Thoughts)
-- [Stripe Testing Card](#stripe_testing_card)
 
 ## 💡 About <a name = "about"></a>
 As the name suggests, just a small and simple store (and sort of a database-less application).<br>
