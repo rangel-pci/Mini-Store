@@ -6,7 +6,7 @@ type amount_paid_per_product = {
     amount: number
 }
 
-class CustomersService{
+class StripeWebhooksService{
     async handlePaymentIntentSucceeded(payment_intent_event: Stripe.Event.Data.Object){
         const payment_intent = <Stripe.PaymentIntent>payment_intent_event
         const products_ids: string[] = []
@@ -41,4 +41,4 @@ class CustomersService{
     }
 }
 
-export default new CustomersService()
+export default new StripeWebhooksService()
